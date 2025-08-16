@@ -8,7 +8,7 @@ import csv
 
 def main():
     # apple 10q --> aapl-20250628
-    fileToParsePath = "appl.htm"
+    fileToParsePath = "../appl.htm"
 
     # open the file
     fileToParse = open(fileToParsePath)
@@ -28,8 +28,9 @@ def main():
                 tableData = row.find_all("td")
                 for data in tableData:
                     for dataString in data.strings:
-                        csvRow += dataString
-                    csvRow += ","
+                        if dataString != None:
+                            csvRow += dataString
+                            csvRow += ","
                 print(csvRow)
             print()
 
@@ -51,5 +52,6 @@ def main():
         print()
         print("end of table *************")
 """
+
 
 main()
