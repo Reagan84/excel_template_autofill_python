@@ -22,36 +22,17 @@ def main():
         finSheet = titleTable.find("table")
         if finSheet != None:
             print(titles.string)
-            tableRow = finSheet.find_all("tr")
-            for row in tableRow:
-                csvRow = ""
-                tableData = row.find_all("td")
-                for data in tableData:
-                    for dataString in data.strings:
-                        if dataString != None:
-                            csvRow += dataString
-                            csvRow += ","
-                print(csvRow)
-            print()
+            finRow = finSheet.find_all("tr")
+            for stringRow in finRow:
+                stringTemp = ""
+                for strrow in stringRow.stripped_strings:
+                    stringTemp +=  (strrow + ", ")
+                print(stringTemp[:-2])
+            
 
 
 
-"""
-    tableInfo = soup.find_all("table")
-    for table in tableInfo:
-        tableRow = table.find_all("tr")
-        for row in tableRow:
-            csvRow = ""
-            tableData = row.find_all("td")
-            for data in tableData:
-                for dataString in data.strings:
-                    csvRow += dataString
-                csvRow += ","
-            print(csvRow)
-        print()
-        print()
-        print("end of table *************")
-"""
+
 
 
 main()
