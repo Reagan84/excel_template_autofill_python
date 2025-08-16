@@ -20,18 +20,19 @@ OR
 - save and close excel copy and excel template
 
 # CMD usage
->$etap 
->usage: ...
+\>$etap <br>
+\>usage: ...
 
->$etap addTemplate
->excel template path: <C://absolute path> # validate that a real excel file exsists here else return error
->cell key values: <a1:a11>, <a13:19>, <c1:c10> # defines where program will look to find keys for dict value
->cell input values: <b2:b11>, <b13:b19>, <c1:c10> # defines where program will put input values, all key values must have input values, possession determined by order
->inputBundleDef: <"short term debt", "treasury bills" "Line of credit", > # key is first, then values, tells program to look for keys and add its values together to get new key value pair
->Operation Successful
+\>$etap addTemplate <br>
+\>excel template path: <C://absolute path> # validate that a real excel file exsists here else return error<br>
+\>cell key values: <a1:a11>, <a13:19>, <c1:c10> # defines where program will look to find keys for dict value <br>
+\>cell input values: <b2:b11>, <b13:b19>, <c1:c10> # defines where program will put input values, all key values must have input values, possession determined by order <br>
+\>inputBundleDef: <"short term debt", "treasury bills" "Line of credit", > # key is first, then values, tells program to look for keys and add its values together to get new key value pair <br>
+\>add another?: (y/n) <br>
+\>Operation Successful
 
->$etap makeSheet <input> <template> # takes in HTML file (in future edgar api cmds) and uses the template 
->Operation Successful
+\>$etap makeSheet \<input> \<template> # takes in HTML file (in future edgar api cmds) and uses the template <br>
+\>Operation Successful
 
 # get HTML (implement upon completion)
 - have user upload a pdf (prob just have it link in the main cmd)
