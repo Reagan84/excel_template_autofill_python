@@ -1,13 +1,13 @@
 # Excel Template Autofill in Python (ETAP)
 
-### functionality
+## Functionality:
 
-# Create Template
+### Create Template
 - Save file address, input keys, input values, bundled keys to JSON file, and
 - naming conventions
 (bundled keys are multiple inputs dicts combined into one dict)
 
-# Load Excel
+### Load Excel
 - open template JSON file
 - open excel file
 - Save Value keys to an array
@@ -19,7 +19,11 @@ OR
 - load dict to excel copy via pandas 
 - save and close excel copy and excel template
 
-# CMD usage
+### Get HTML (implement upon completion)
+- have user upload a pdf (prob just have it link in the main cmd)
+- have user grab it via the EDGAR api
+
+### CMD usage
 \>$etap <br>
 \>usage: ...
 
@@ -34,6 +38,4 @@ OR
 \>$etap makeSheet \<input> \<template> # takes in HTML file (in future edgar api cmds) and uses the template <br>
 \>Operation Successful
 
-# get HTML (implement upon completion)
-- have user upload a pdf (prob just have it link in the main cmd)
-- have user grab it via the EDGAR api
+
