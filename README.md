@@ -1,14 +1,38 @@
 # Excel Template Autofill in Python (ETAP)
 
-### Goals
-- take HTML input from EDGAR and CEDAR
-- (first have user download file, then use console to access [later on])
-- have the user build an excel template
-- use a json file to configure tags on what data should be stored where
-- have python script scroll through html provided, looking for tags
-- open an excel file
-- make a copy of the template
-- copy html flagged data to excel file
-- close excel file
+### functionality
 
+# Create Template
+- Save file address, input keys, input values, bundled keys to JSON file, and
+- naming conventions
+(bundled keys are multiple inputs dicts combined into one dict)
 
+# Load Excel
+- open template JSON file
+- open excel file
+- Save Value keys to an array
+- Soupify HTML and chop it into its table parts by the row
+OR
+- Run imaging api to save values by the row
+- save rows to a dict, first coloumn being the key and the remaining being the values
+- make copy of excel template
+- load dict to excel copy via pandas 
+- save and close excel copy and excel template
+
+# CMD usage
+>$etap 
+>usage: ...
+
+>$etap addTemplate
+>excel template path: <C://absolute path> # validate that a real excel file exsists here else return error
+>cell key values: <a1:a11>, <a13:19>, <c1:c10> # defines where program will look to find keys for dict value
+>cell input values: <b2:b11>, <b13:b19>, <c1:c10> # defines where program will put input values, all key values must have input values, possession determined by order
+>inputBundleDef: <"short term debt", "treasury bills" "Line of credit", > # key is first, then values, tells program to look for keys and add its values together to get new key value pair
+>Operation Successful
+
+>$etap makeSheet <input> <template> # takes in HTML file (in future edgar api cmds) and uses the template 
+>Operation Successful
+
+# get HTML (implement upon completion)
+- have user upload a pdf (prob just have it link in the main cmd)
+- have user grab it via the EDGAR api
