@@ -27,26 +27,19 @@ def main():
     soup = (BeautifulSoup(fileToParse, "html.parser"))
     
     # put html Table rows in dicts
-    tRows = soup.find_all("tr")
-    for row in tRows:
-        aRow = row.strings
-        lRow = list(aRow)
-        rowDict = {}
-        keyInput = 0
-        # think this through
-        for i in range(0, len(lRow)):
-            if i == 0:
-                keyInput = lRow[i]
-            else:
-                rowDict = {keyInput: lRow[i]}
-        if len(lRow) > 1:
-            print(rowDict[keyInput])
+    treeRows = soup.find_all("tr")
+    tableContents = {}
+    tableHasher = []
+    for treeRow in treeRows:
+        treeRowStringsArr = list(treeRow.strings)
+        if(len(treeRowStringsArr) > 0):
+            tableHasher.append(treeRowStringsArr[0])
+            tableContents[treeRowStringsArr[0]] = treeRowStringsArr[1:]
 
-        for i in rowDict:
-            print("key: " + i)
-            
+    
     # print out dicts
-
+    for i in tableHasher: 
+        print(tableContents[i])
 
 
 
