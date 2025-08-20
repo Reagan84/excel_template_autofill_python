@@ -13,7 +13,7 @@ OR
 """
 
 from bs4 import BeautifulSoup
-import pandas as pd
+from openpyxl import Workbook, load_workbook
 
 def main():
     # apple 10q --> aapl-20250628
@@ -37,9 +37,19 @@ def main():
             tableContents[treeRowStringsArr[0]] = treeRowStringsArr[1:]
 
     
-    # print out dicts
-    for i in tableHasher: 
-        print(tableContents[i])
+    # print to excel
+    ftotal = "/mnt/c/Users/Michi/Desktop/tets.xlsx"
+    xlTemplate = load_workbook(filename = ftotal)
+    ws1 = xlTemplate.create_sheet("Balance Sheet")
+    x = 1
+    for i in range(len(tableHasher)):
+        rowArray = tableContents[tableHasher[i]]
+        y = 1
+        for j in range(len(rowArray)):
+            ws1.cell(row = x, column = y, value = rowArray[j])
+            y += 1
+        x += 1
+    xlTemplate.save(ftotal)
 
 
 
