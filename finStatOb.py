@@ -45,9 +45,10 @@ def main():
     for i in range(len(tableHasher)):
         rowArray = tableContents[tableHasher[i]]
         y = 1
+        ws1.cell(row = x, column = y, value = tableHasher[i])
         for j in range(len(rowArray)):
-            ws1.cell(row = x, column = y, value = rowArray[j])
             y += 1
+            ws1.cell(row = x, column = y, value = rowArray[j])
         x += 1
     xlTemplate.save(ftotal)
 
