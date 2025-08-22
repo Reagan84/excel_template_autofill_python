@@ -1,0 +1,47 @@
+{
+    "income_statement":
+    {
+        "Revenue": [],
+        "COGS": [],
+        "GrossProfit": [],
+        "OperatingExpenses": [],
+        "SG&A": [],
+        "R&D": [],
+        "Depreciation": [],
+        "OperatingProfit": [],
+        "InterestExpense": [],
+        "GainLossSaleAsset": [],
+        "Other": [],
+        "IncomePreTax": [],
+        "IncomeTax": [],
+        "NetEarings": []
+    },
+
+    "balance_sheet":
+    {
+        "Cash&ShortTermInvestments": [],
+        "Inventory": [],
+        "NetReceivables": [],
+        "PrepaidExpenses": [],
+        "CurrentAssets": [],
+        "PPE": [],
+        "Goodwill": [],
+        "Intangible": [],
+        "LongTermInvestments": [],
+        "TotalAssets": [],
+
+        "AccountsPayable": [],
+        "AccuredExpenses": [],
+        "ShortTermDebt": [],
+        "LongTermDebt": [],
+        "CurrentLiabilities": [],
+
+        "PreferredStock": [],
+        "CommonStock": [],
+        "AdditionalPaidInCapital": [],
+        "RetainedEarnings": [],
+        "Dividends": [],
+        "TotalSHEquity": [],
+        "TotalL&SHE": []
+    }
+}
