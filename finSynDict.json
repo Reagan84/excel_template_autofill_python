@@ -1,20 +1,19 @@
 {
     "income_statement":
     {
-        "Revenue": [],
-        "COGS": [],
-        "GrossProfit": [],
-        "OperatingExpenses": [],
-        "SG&A": [],
-        "R&D": [],
-        "Depreciation": [],
-        "OperatingProfit": [],
-        "InterestExpense": [],
-        "GainLossSaleAsset": [],
-        "Other": [],
-        "IncomePreTax": [],
-        "IncomeTax": [],
-        "NetEarings": []
+        "Revenue": ["Revenue", "Net Sales", "Total Net Sales"],
+        "COGS": ["COGS", "Cost of Sales", "Total Cost of Sales"],
+        "GrossProfit": ["GrossProfit", "Gross Margin"],
+        "OperatingExpenses": ["Operating Expenses"],
+        "SG&A": ["SG&A", "Selling, general and administrative"],
+        "R&D": ["R&D", "Research and development"],
+        "Depreciation": ["Depreciation"],
+        "OperatingProfit": ["OperatingProfit"],
+        "InterestExpense": ["InterestExpense", "Operating income"],
+        "IncomePreTax": ["IncomePreTax", "Income before provision for income taxes"],
+        "IncomeTax": ["IncomeTax", "Provision for income taxes"],
+        "NetEarings": ["NetEarings", "Net income"],
+        "EPS": ["Earnings Per Share"]
     },
 
     "balance_sheet":
