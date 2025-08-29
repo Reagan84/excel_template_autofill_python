@@ -40,8 +40,9 @@ def main():
             if(len(treeRowStringsArr) > 0):
                 tableHasher.append(treeRowStringsArr[0])
                 tableContents[treeRowStringsArr[0]] = treeRowStringsArr[1:]
+        # send a table to test() to determine what it is
         test(tableHasher, tableContents)
-        # verify function with JSON stuff 
+        
 
     """
     # print to excel --> prob wont work
@@ -61,6 +62,7 @@ def main():
     """
 
 def test(hash, contents):
+    # contains 
     with open('/mnt/c/Users/Michi/Documents/codeSpace/excel_template_autofill_python/finSynDict.json') as finDictRaw:
         finDict = json.load(finDictRaw)
 
