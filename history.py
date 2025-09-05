@@ -15,14 +15,14 @@ import json
 def main():
     # apple 10q --> aapl-20250628
     fileToParsePath = "../appl.htm"
-    # will need to search for
+    # TODO: will need to search for
     fileToParsePathD = "/mnt/c/Users/Michi/Documents/codeSpace/appl.htm"
 
     # open the file
     fileToParse = open(fileToParsePathD)
     soupDiv = (BeautifulSoup(fileToParse, "html.parser")).find_all("div")
 
-    # will need to search for later
+    # TODO: will need to search for later
     keyWord = "Apple Inc."
     # flag for when we want to search the following div
     hitFlag = 0 
@@ -35,7 +35,6 @@ def main():
              if finTable != None:
                   printToNewExcelSheet(finTable)
 
-
         divStrings = divToSearch.strings
         for stringToSearch in divStrings:
             hitFlag, extractTable = matchFlagger(stringToSearch, keyWord, hitFlag, extractTable)
@@ -46,6 +45,7 @@ def main():
 def matchFlagger(stringToMach, keyWord, hitFlag, boolFlag):
     # max amount of lines to search 
     maxAttempts = 2
+    # TODO: fix so program can grab all 4 statements
     titlesOfInterest = ["STATEMENTS OF OPERATIONS", "STATEMENTS OF CASH FLOWS"]
     titleToMatch = titlesOfInterest[0] if not boolFlag else titlesOfInterest[1]
 
@@ -74,6 +74,7 @@ def printToNewExcelSheet(finTable):
     ws1 = xlTemplate.create_sheet("FINSTATEMENT")
 
     # TODO: have this shit print into an array for easier manipulation
+    # TODO: turn finstatements in objects?
     finTableRows = finTable.find_all("tr")
 
     x_axis = 0
