@@ -35,8 +35,8 @@ finFUCK = finFacts["us-gaap"]
 # within items of interest exists "label", "description", and "units"
 # units contains USD (may change)
 # USD contains the object of interest: start and end periods, form, year, quarter, file date, and value
-finOMG = finFUCK["GrossProfit"]
-finJesus = finOMG["units"]
-finIDK = finJesus["USD"]
-for facts in finIDK:
+#finOMG = finFUCK["GrossProfit"]
+#finJesus = finOMG["units"]
+#finIDK = finJesus["USD"]
+for facts in finFUCK:
         print(facts)
